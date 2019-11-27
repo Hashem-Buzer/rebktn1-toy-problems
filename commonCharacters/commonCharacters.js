@@ -13,5 +13,16 @@
 
 
 var commonCharacters = function(string1, string2) {
-  // TODO: Your code here!
+  var array = []; // to store the string of Common Characters.
+  var str1 = string1.split('');
+  var str2 = string2.split('');
+
+  for (var i = 0; i < str1.length; i++) {
+  	if (str2.includes(str1[i])) { // checking if the str1[i] is exists in str2 or not
+  		if (!array.includes(str1[i])) { // to avoid dublication by checking before pushing to array if the char that i want to push is already pushed or not.
+  			array.push(str1[i]);
+  		}
+  	}
+  }
+  return array.join(''); // converting the array to be string
 };
