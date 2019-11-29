@@ -28,3 +28,22 @@
 // Additional notes:
 
 // There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
+
+
+function hard(arr) {
+	var max = arr[0];
+	// var min = arr[0];
+	// Math.min(...arr);
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] > max) {
+		 max = arr[i];
+		}
+		arr[i] = max - arr[0];
+	}
+	// Math.max(...arr);
+	// console.log(max)
+		// console.log(min)
+
+console.log(arr)
+}
