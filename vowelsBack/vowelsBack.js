@@ -10,6 +10,7 @@
 
 // If a moved letter becomes 'c', 'o', 'd' or 'e', revert it back to it's original value.
 
+<<<<<<< HEAD
 // Provided string will always be lower case, won't be empty and will have no special characters.
 
 
@@ -98,3 +99,6 @@ var AlphabetList = function() {
 
 // the idea is i did an object as a sircular linked list has all the alphabets and what i need to do is putting all the rules inside objects inside an array,
 //  every time i loop through the letters i check what is it, vowel or consonant.
+=======
+// Provided string will always be lower case, won't be empty and will have no special characters.
+>>>>>>> 269a3ee75c6d59550b6ccccaefaa5cb33683dbdd

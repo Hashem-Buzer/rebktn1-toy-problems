@@ -10,6 +10,7 @@ characterFrequency("aaabbc") -->    [ [ "a", 3 ], [ "b", 2 ], [ "c", 1 ] ]
 characterFrequency("mississippi")  -->  [ [ "i", 4 ], [ "s", 4 ], [ "p", 2 ], [ "m", 1 ] ]
 
 characterFrequency("") -->  [ ]
+<<<<<<< HEAD
 */
 
 function characterFrequency(str) {
@@ -39,3 +40,6 @@ function characterFrequency(str) {
 }
 
 // half way correct except the undefined i tried to solve it but i couldnt
+=======
+*/
+>>>>>>> 269a3ee75c6d59550b6ccccaefaa5cb33683dbdd
