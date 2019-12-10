@@ -17,8 +17,7 @@ and true if the number is more than or equal to x, false if not:
 
 x will always be a positive integer, and s will never be empty
 
-- regular expression is not allowed 
-
+- regular expression is not allowed
 
 */
 
