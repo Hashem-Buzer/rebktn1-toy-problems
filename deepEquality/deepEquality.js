@@ -12,4 +12,15 @@
   *
   */
 var deepEquals = function(apple, orange) {
+	var app = [];
+	app.push(Object.entries(apple).toString());
+
+	var oran = [];
+	oran.push(Object.entries(orange).toString());
+
+	var appString = app.toString();
+	var oranString = oran.toString();
+
+	return appString === oranString;
+	// return Object.entries(apple).toString() === Object.entries(test).toString() ? true : false
 };
