@@ -9,4 +9,19 @@ parseQueryString("http://example.com?msg=hello%20world") // [ [ "msg", "hello wo
 parseQueryString("http://example.com") // undefined
 */
 
-function parseQueryString(url) {}
+function parseQueryString(url) {
+	var arr = [];
+	var s = '';
+
+	for (var i = i || 0; i < url.length; i++) {
+		// parseInt(url[i], 10);
+		// console.log(url[i])
+		if (url[i] === '?') {
+			s = url[i];
+		}
+		if (s !== '' && (url[i] !== '=' || url[i] !== '&' || url[i] !== '%')) {
+			arr.push(url[i])
+		}
+	}
+			return arr
+}
