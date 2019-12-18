@@ -51,7 +51,7 @@ Tree.prototype.BFSelect = function(filter) {
     }
   };
 
-  return arr;
+  return arr.sort();
 };
 
 /**
