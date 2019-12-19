@@ -40,15 +40,35 @@
 
 
 var Range = function(start, end, step) {
+	this.size = 0;
+
+	while (start <= end) {
+		if (step === undefined) {
+			step = 1;
+		}
+		if (this.each() > end) {
+			this.size();
+		} else {
+		this.each();
+		this.size++;
+		}
+	}
 };
 
 Range.prototype.size = function () {
+	return this.size;
 };
 
-Range.prototype.each = function (callback) {
+Range.prototype.each = function () {
+	return this.start += this.step;
 };
 
 Range.prototype.includes = function (val) {
+	if (this.start % 2 = 1 && this.end % 2 = 1 && this.step % 2 = 0) {
+		return true;
+	} else if (this.start % 2 = 1 && this.end % 2 = 1 && this.step % 2 = 1) {
+		return false;
+	}
 };
 
 var range = new Range(1);
