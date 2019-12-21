@@ -39,4 +39,6 @@
 
 
 var asyncMap = function(tasks, callback) {
+
+	//// i could solve it if i know how to use callback, i will train myself more and i will try to solve it.
 };
