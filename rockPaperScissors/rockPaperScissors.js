@@ -18,7 +18,18 @@
 *
 */
 
-var rockPaperScissors = function (
-) {
+var rockPaperScissors = function (n) {
   // TODO: your solution here
+  let res = [];
+  let arr = ['R', 'P', 'S'];
+  let random = [];
+
+  for (let i = 0; i < 4; i++) {
+  	random.push( arr[Math.floor(Math.random() * arr.length)] );
+  }
+
+  while (res.length < n) {
+  	res.push(random.join(''))
+  }
+  return res
 };
