@@ -7,3 +7,21 @@ evenOccurrence([ "cat", "dog", "dig", "cat" ]) // "cat"
 evenOccurrence([[1,2,3], [1,2], [1,2,3]]) // [1,2,3]
 evenOccurrence([{a: 1, b: 2}, {a:1, b:3}, {a:1, b:2}]) // {a:1, b:2}
 */
+
+function evenOccurrence (array) {
+  var storage = {};
+
+  array.forEach((elem)=> {
+    storage[elem] = storage[elem] + 1 || 1;
+  });
+
+  for (var i = 0; i < array.length; i++) {
+    var thisElem = array[i];
+
+    if (storage[thisElem] % 2 === 0) {
+      return thisElem;
+    }
+  }
+
+  return null;
+}
