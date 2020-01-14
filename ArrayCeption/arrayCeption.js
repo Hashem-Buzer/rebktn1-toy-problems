@@ -15,3 +15,21 @@
 //  [ ] ==>	0
 //  array:
 //  [ [ [ ] ] ] ==>	0
+
+function arrayception (array) {
+	var max = 0, counter;
+
+  array.forEach((item)=> {
+    if (item.length === 0) {
+      counter = 0;
+    } else if(Array.isArray(item)) {
+      counter = arrayception(item);
+     
+      if(counter > 0) counter += 1;
+    } else counter = 1;
+    
+  if (counter > max ) max = counter;
+  });
+  
+  return max;
+}
