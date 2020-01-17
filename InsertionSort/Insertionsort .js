@@ -25,4 +25,31 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var insertionSortList = function(head) {};
+var insertionSortList = function(head) {
+ var result = [];
+ var pointer = head;
+  
+  while (pointer) {
+	  if (!result.length) {
+	      result.push(pointer.val);
+	  }
+	  else {
+	    var isInserted = false;
+
+	    for (var i = 0; i < result.length; i++) {
+	      if (pointer.val < result[i]) {
+	          result.splice(i, 0, pointer.val);
+
+	       isInserted = true;
+	      }
+	      else if (i === result.length - 1) {
+	        result.push(pointer.val);
+	      }
+	    }
+	  }
+	  
+	  pointer = pointer.next;
+  }
+  
+  return result;
+};
