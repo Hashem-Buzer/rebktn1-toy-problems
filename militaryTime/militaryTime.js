@@ -25,11 +25,11 @@ var pm = {
 }
 
 	function toMilitary(time) {
+	  // your code here...
 		time = time.split(':');
 
-		var hours = Number(time[0]);
-		var minutes = Number(time[1]);
-		var seconds = Number(time[2]);
+		var hours = parseInt(time[0]);
+		var minutes = parseInt(time[1]);
 
 		var timeValue;
 
@@ -40,15 +40,6 @@ var pm = {
 		} else if (hours == 0) {
 		  timeValue= "12";
 		}
-		return timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;
+
+		return timeValue += minutes < 10 ? ":0" + minutes : ":" + minutes;
 	}
-	  // your code here...
-	  // if (time.includes('am')) {
-	  // 	pm.map((elem, i)=> {
-	  // 		console.log(time, "test")
-	  // 	})
-	  // 	return time.substring(0, time.length - 2)
-	  // } 
-	  // else if(time.includes('pm')) {
-	  // 	if (time[pm])
-	  // }
