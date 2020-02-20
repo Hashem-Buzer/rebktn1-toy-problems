@@ -14,17 +14,36 @@
 
 // You've got Helpers!
 
-// var DIGIT_VALUES = {
-//     I: 1,
-//     V: 5,
-//     X: 10,
-//     L: 50, 
-//     C: 100,
-//     D: 500,
-//     M: 1000
-//   };
+var DIGIT_VALUES = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50, 
+    C: 100,
+    D: 500,
+    M: 1000
+  };
 
 function translateRomanNumeral (romanNumeral) {
     // Write your code here, and
     // return your final answer.
+    var result = 0;
+    var char = romanNumeral.split('');
+
+    for (var c = 0; c < char.length; c ++) {
+    	for (var i in DIGIT_VALUES) {
+    		if (char[c] === i) {
+    			// console.log(DIGIT_VALUES[char[c]], "hhhh")
+    			// console.log(char[c], "cccc")
+
+    			if (DIGIT_VALUES[char[c]] < DIGIT_VALUES[char[c++]]) {
+    				console.log('here')
+    				result +=	DIGIT_VALUES[i]
+    				// result += DIGIT_VALUES[i][char[c++]] - DIGIT_VALUES[i][char[c]]
+    			}
+    		}
+    	}
+    }
+
+    return result
   }
